@@ -14,6 +14,7 @@ ENV PHP_UPSTREAM_CONTAINER=php-fpm
 ENV PHP_UPSTREAM_PORT=9000
 
 COPY conf.d/*.conf /etc/nginx/conf.d/
+COPY conf.d/cors_settings  /etc/nginx/conf.d/
 COPY ./startup.sh /opt/startup.sh
 COPY nginx.conf /etc/nginx/
 
