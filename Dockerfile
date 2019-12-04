@@ -7,8 +7,8 @@ RUN apk update \
   # && apk add --no-cache openssl \
   && apk add --no-cache bash \
   && rm /var/cache/apk/* \
-  && rm /etc/nginx/conf.d/default.conf \
-  && adduser -D -H -u 1000 -s /bin/bash www-data
+  && rm /etc/nginx/conf.d/default.conf
+  # && adduser -D -H -u 1000 -s /bin/bash www-data
 
 ENV PHP_UPSTREAM_CONTAINER=php-fpm
 ENV PHP_UPSTREAM_PORT=9000
